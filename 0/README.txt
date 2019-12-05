@@ -1,4 +1,4 @@
-docker run -d --name pause -p 8080:80 gcr.io/google_containers/pause-amd64:3.0
+docker run -d --name pause -p 8080:80 --ipc=shareable gcr.io/google_containers/pause-amd64:3.0
 
 cat <<EOF >> nginx.conf
 error_log stderr;
